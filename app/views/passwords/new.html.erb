@@ -1,0 +1,18 @@
+<div class="container mt-5">
+  <div class="card">
+    <div class="card-body">
+      <%= tag.div(flash[:alert], style: "color:red") if flash[:alert] %>
+      <h1>Forgot your password?</h1>
+      <%= form_with url: passwords_path do |form| %>
+        <div class="mb-3">
+          <%= form.label :email_address, class: 'form-label' %>
+          <%= form.email_field :email_address, required: true, class: 'form-control', value: params[:email_address] %>
+        </div>
+        <div class="mb-3 d-flex justify-content-between">
+          <%= form.submit "Email reset instructions", class: 'btn btn-success' %>
+          <%= link_to "Sign in", new_session_path, class: 'btn btn-primary' %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

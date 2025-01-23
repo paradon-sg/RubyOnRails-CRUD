@@ -1,0 +1,13 @@
+<nav class="navbar bg-dark border-bottom border-body" data-bs-theme="dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <div class="dropdown">
+      <button class="btn btn-outline-light dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <%= Current.user.email_address %>
+      </button>
+      <ul class="dropdown-menu">
+        <li><%= button_to "Sign out", session_path, method: :delete, class: 'dropdown-item' %></li>
+      </ul>
+    </div>
+  </div>
+</nav>
