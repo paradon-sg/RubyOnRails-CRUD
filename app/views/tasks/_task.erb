@@ -1,0 +1,5 @@
+<div class="card border-0 bg-body-tertiary mb-3" id="<%= dom_id task %>">
+    <div class="card-body text-center">
+        <input type="text" class="form-control" value="<%= task.title %>" data-action="change->task#update" data-task-id="<%= task.id %>">
+    </div>
+</div>
