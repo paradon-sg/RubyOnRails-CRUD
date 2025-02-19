@@ -18,13 +18,14 @@ class TasksController < ApplicationController
       render json: {}, status: :no_content
     else
       @task.update(task_params)
-      render json: {}, status: :unprocessable_entity
+      render json: {}, status: :no_content
     end
   end
 
   def destroy
     @task = Task.find(params[:id])
     @task.destroy
+    render json: {}, status: :no_content
   end
 
   private
