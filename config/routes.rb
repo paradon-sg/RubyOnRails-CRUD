@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
-  get "tasks/index"
+  mount MissionControl::Jobs::Engine, at: "/jobs"
+
   resource :session
+
   resources :passwords, param: :token
 
   resources :tasks, only: [ :index, :update, :create ]

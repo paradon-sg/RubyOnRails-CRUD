@@ -21,7 +21,7 @@
     </div>
 
     <%= turbo_stream_from "tasks" %>
-    <div id="tasks" class="mt-5">
-      <%= render partial: 'task', collection: @tasks %>
+    <div id="items" class="mt-5">
+        <%= render partial: "task", collection: @tasks %>
     </div>
 </div>

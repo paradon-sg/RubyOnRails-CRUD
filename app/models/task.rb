@@ -8,7 +8,7 @@ class Task < ApplicationRecord
   after_destroy :broadcast_remove_task
 
   def broadcast_task
-    broadcast_append_to("tasks", partial: "tasks/task", locals: { task: self })
+    broadcast_append_to("tasks", target: "items", partial: "tasks/task", locals: { task: self })
   end
 
   def broadcast_replace_task
