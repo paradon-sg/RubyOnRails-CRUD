@@ -4,6 +4,9 @@ else
   User.first
 end
 
+if User.where(email_address: "mouth_hd@hotmail.co.th").count.zero?
+  User.create(email_address: "mouth_hd@hotmail.co.th", password: "password")
+end
 
 if Task.count.zero?
   [
