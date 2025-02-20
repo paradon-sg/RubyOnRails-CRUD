@@ -25,11 +25,9 @@ development:
     database: storage/cable.sqlite3
     migrations_paths: db/cable_migrate
 
-
 test:
   <<: *secondary
   database: storage/my_app_test.sqlite3
-
 
 production:
   primary: &primary_production

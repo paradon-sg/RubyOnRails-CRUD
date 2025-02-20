@@ -11,11 +11,8 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema[8.0].define(version: 2025_01_23_072727) do
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "pg_catalog.plpgsql"
-
   create_table "sessions", force: :cascade do |t|
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.string "ip_address"
     t.string "user_agent"
     t.datetime "created_at", null: false
@@ -25,7 +22,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_01_23_072727) do
 
   create_table "tasks", force: :cascade do |t|
     t.string "title", null: false
-    t.bigint "user_id", null: false
+    t.integer "user_id", null: false
     t.text "detail"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
